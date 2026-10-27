@@ -55,11 +55,17 @@ export class Maintenance {
   @Column({ type: 'text', nullable: true })
   workDone: string | null;
 
+  // Convierte el numeric de PostgreSQL a number en TypeScript
   @Column({
     type: 'numeric',
     precision: 12,
     scale: 2,
     nullable: true,
+    transformer: {
+      to: (value: number | null) => value,
+      from: (value: string | null) =>
+        value === null ? null : Number.parseFloat(value),
+    },
   })
   finalCost: number | null;
 

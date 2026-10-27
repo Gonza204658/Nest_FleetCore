@@ -8,7 +8,11 @@ export class UsersService {
   constructor(@InjectRepository(User) private readonly repo: Repository<User>) {}
 
   findByEmail(email: string) {
-    return this.repo.findOne({ where: { email } });
+  return this.repo
+    .createQueryBuilder('u')
+    .addSelect('u.password')
+    .where('u.email = :email', { email })
+    .getOne();
   }
 
   findById(id: number) {
