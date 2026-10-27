@@ -1,6 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module.js';
+import { VehiclesModule } from './vehicles/vehicles.module.js';
+import { MechanicsModule } from './mechanics/mechanics.module.js';
+import { WorkshopsModule } from './workshops/workshops.module.js';
+import { MaintenancesModule } from './maintenances/maintenances.module.js';
 
 @Module({
   imports: [
@@ -18,6 +23,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: true, // solo desarrollo
       }),
     }),
+    UsersModule,
+    VehiclesModule,
+    MechanicsModule,
+    WorkshopsModule,
+    MaintenancesModule,
   ],
 })
 export class AppModule {}
