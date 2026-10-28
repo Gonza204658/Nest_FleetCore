@@ -3,8 +3,8 @@
 API REST para gestionar el mantenimiento de la flota de FleetCore.
 Stack: NestJS, TypeScript, TypeORM, PostgreSQL, JWT.
 
-**Coder:** TU NOMBRE COMPLETO
-**Clan:** TU CLAN
+**Coder:** Diego Fernando GOnzalez Henriquez
+**Clan:** Nodejs + Nestjs
 
 ## Requisitos
 - Node.js 20+
@@ -12,8 +12,8 @@ Stack: NestJS, TypeScript, TypeORM, PostgreSQL, JWT.
 
 ## Instalación
 ```bash
-git clone <URL_DEL_REPO>
-cd fleetcore
+git clone <https://github.com/Gonza204658/Nest_FleetCore.git>
+cd Nest_FleetCore
 npm install
 ```
 
